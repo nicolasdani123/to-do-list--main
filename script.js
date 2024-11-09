@@ -69,16 +69,16 @@ const toDoList = {
     }
   },
 
-  // Função para carregar tarefas do localStorage e renderizá-las na página
   loadTasks() {
     const tasks = JSON.parse(localStorage.getItem(this.Key)) || [];
-    tasks.forEach((task) => this.renderTask(task));
+    tasks.forEach((task) => this.renderTask(task)); // Renderizando todas as tarefas
   },
 };
 
-// Carrega as tarefas ao abrir a página
+// Carregar as tarefas ao carregar a página
 toDoList.loadTasks();
 
 const { btnAdd } = toDoList;
 btnAdd.addEventListener("click", () => toDoList.addTask());
+
 
